@@ -21,13 +21,4 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 
-jobs:
-- job: Print_Host_Details
-  displayName: 'Print Host Details'
-  pool:
-    name: MySelfHostedPool  # Replace with the name of your self-hosted pool
-  steps:
-  - script: echo "Host Details:$(hostname)"
-    displayName: 'Print Hostname'
-  - script: echo "IP Address:$(hostname -i)"
-    displayName: 'Print IP Address'
+
